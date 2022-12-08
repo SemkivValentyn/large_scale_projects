@@ -11,7 +11,7 @@ export const getUser = async (req, res) => {
     }
 }
 
-export const getUserFriend = async (req, res) => {
+export const getUserFriends = async (req, res) => {
     try {
         const {id} = req.params;
         const user = await User.findById(id);
