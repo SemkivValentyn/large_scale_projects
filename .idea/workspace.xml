@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f965bab-0608-417a-b5d7-10b87a1dc639" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/data/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +51,7 @@
       <recent name="C:\Users\semki\WebstormProjects\large_scale_projects\server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\semki\WebstormProjects\large_scale_projects\server" />
       <recent name="C:\Users\semki\WebstormProjects\large_scale_projects" />
     </key>
   </component>
@@ -55,7 +65,10 @@
       <updated>1670180819247</updated>
       <workItem from="1670180822567" duration="3621000" />
       <workItem from="1670264718927" duration="4350000" />
-      <workItem from="1670489369222" duration="4268000" />
+      <workItem from="1670489369222" duration="7471000" />
+      <workItem from="1670601877701" duration="603000" />
+      <workItem from="1670602507929" duration="848000" />
+      <workItem from="1670941364750" duration="2230000" />
     </task>
     <servers />
   </component>
