@@ -9,6 +9,7 @@ import {
     FormControl,
     useTheme,
     useMediaQuery,
+    Avatar
 } from "@mui/material";
 import {
     Search,
@@ -21,9 +22,10 @@ import {
     Close,
 } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
-import {setMode, setLogout} from "../../state/state";
+import { setMode, setLogout } from "../../state/state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "../../componets/FlexBetween";
+
 
 const Navbar = () => {
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
@@ -39,7 +41,7 @@ const Navbar = () => {
     const primaryLight = theme.palette.primary.light;
     const alt = theme.palette.background.alt;
 
-    const fullName = `Fake Person`;  //`${user.firstName} ${user.lastName}`
+    const nickName = `${user.nickname}`;  //`${user.firstName} ${user.lastName}`
 
     return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -86,9 +88,9 @@ const Navbar = () => {
                     <Message sx={{ fontSize: "25px" }} />
                     <Notifications sx={{ fontSize: "25px" }} />
                     <Help sx={{ fontSize: "25px" }} />
-                    <FormControl variant="standard" value={fullName}>
+                    <FormControl variant="standard" value={nickName}>
                         <Select
-                            value={fullName}
+                            value={nickName}
                             sx={{
                                 backgroundColor: neutralLight,
                                 width: "150px",
@@ -104,12 +106,19 @@ const Navbar = () => {
                             }}
                             input={<InputBase />}
                         >
-                            <MenuItem value={fullName}>
-                                <Typography>{fullName}</Typography>
+                            <MenuItem value={nickName}>
+                                <Typography>{nickName}</Typography>
                             </MenuItem>
                             <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
                         </Select>
                     </FormControl>
+                    <Avatar
+                        alt="Remy Sharp"
+                        sx={{ fontSize: "22px", bgcolor: dark }}
+                        
+                    >
+                        {nickName.slice(0, 1).toUpperCase()}
+                    </Avatar>
                 </FlexBetween>
             ) : (
                 <IconButton
@@ -131,6 +140,7 @@ const Navbar = () => {
                     minWidth="300px"
                     backgroundColor={background}
                 >
+                    
                     {/* CLOSE ICON */}
                     <Box display="flex" justifyContent="flex-end" p="1rem">
                         <IconButton
@@ -138,6 +148,7 @@ const Navbar = () => {
                         >
                             <Close />
                         </IconButton>
+                        
                     </Box>
 
                     {/* MENU ITEMS */}
@@ -148,6 +159,14 @@ const Navbar = () => {
                         alignItems="center"
                         gap="3rem"
                     >
+                        <Avatar
+                            alt="Remy Sharp"
+                            sx={{ fontSize: "22px", bgcolor: dark }}
+
+                        >
+                            {nickName.slice(0, 1).toUpperCase()}
+                        </Avatar>
+
                         <IconButton
                             onClick={() => dispatch(setMode())}
                             sx={{ fontSize: "25px" }}
@@ -158,12 +177,13 @@ const Navbar = () => {
                                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
                             )}
                         </IconButton>
+
                         <Message sx={{ fontSize: "25px" }} />
                         <Notifications sx={{ fontSize: "25px" }} />
                         <Help sx={{ fontSize: "25px" }} />
-                        <FormControl variant="standard" value={fullName}>
+                        <FormControl variant="standard" value={nickName}>
                             <Select
-                                value={fullName}
+                                value={nickName}
                                 sx={{
                                     backgroundColor: neutralLight,
                                     width: "150px",
@@ -179,14 +199,15 @@ const Navbar = () => {
                                 }}
                                 input={<InputBase />}
                             >
-                                <MenuItem value={fullName}>
-                                    <Typography>{fullName}</Typography>
+                                <MenuItem value={nickName}>
+                                    <Typography>{nickName}</Typography>
                                 </MenuItem>
                                 <MenuItem onClick={() => dispatch(setLogout())}>
                                     Log Out
                                 </MenuItem>
                             </Select>
                         </FormControl>
+                        
                     </FlexBetween>
                 </Box>
             )}
