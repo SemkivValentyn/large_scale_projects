@@ -27,7 +27,8 @@ import { useNavigate } from "react-router-dom";
 import FlexBetween from "../../componets/FlexBetween";
 
 
-const Navbar = () => {
+
+const Navbar = ({ picturePath }) => {
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -115,10 +116,11 @@ const Navbar = () => {
                     <Avatar
                         alt="Remy Sharp"
                         sx={{ fontSize: "22px", bgcolor: dark }}
-                        
+
                     >
                         {nickName.slice(0, 1).toUpperCase()}
                     </Avatar>
+
                 </FlexBetween>
             ) : (
                 <IconButton
@@ -140,7 +142,7 @@ const Navbar = () => {
                     minWidth="300px"
                     backgroundColor={background}
                 >
-                    
+
                     {/* CLOSE ICON */}
                     <Box display="flex" justifyContent="flex-end" p="1rem">
                         <IconButton
@@ -148,7 +150,7 @@ const Navbar = () => {
                         >
                             <Close />
                         </IconButton>
-                        
+
                     </Box>
 
                     {/* MENU ITEMS */}
@@ -207,7 +209,7 @@ const Navbar = () => {
                                 </MenuItem>
                             </Select>
                         </FormControl>
-                        
+
                     </FlexBetween>
                 </Box>
             )}
