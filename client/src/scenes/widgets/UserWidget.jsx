@@ -44,6 +44,7 @@ const UserWidget = ({ userId, picturePath }) => {
         firstName,
         lastName,
         location,
+        country,
         nickname,
         viewedProfile,
         impressions,
@@ -60,8 +61,9 @@ const UserWidget = ({ userId, picturePath }) => {
             >
                 <FlexBetween gap="1rem">
                     <Avatar
+
                         alt="Remy Sharp"
-                        sx={{ fontSize: "22px", bgcolor: dark }}
+                        sx={{ fontSize: "22px", bgcolor: dark, width: "55px", height: "55px" }}
 
                     >
                         {nickname.slice(0, 1).toUpperCase()}
@@ -94,7 +96,7 @@ const UserWidget = ({ userId, picturePath }) => {
             <Box p="1rem 0">
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
                     <LocationOnOutlined fontSize="large" sx={{ color: main }} />
-                    <Typography color={medium}>{location}</Typography>
+                    <Typography color={medium}>{location}, {country}</Typography>
                 </Box>
             </Box>
 
