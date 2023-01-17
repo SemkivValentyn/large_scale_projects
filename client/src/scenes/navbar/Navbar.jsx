@@ -113,13 +113,6 @@ const Navbar = ({ picturePath }) => {
                             <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
                         </Select>
                     </FormControl>
-                    <Avatar
-                        alt="Remy Sharp"
-                        sx={{ fontSize: "22px", bgcolor: dark }}
-
-                    >
-                        {nickName.slice(0, 1).toUpperCase()}
-                    </Avatar>
 
                 </FlexBetween>
             ) : (
@@ -161,14 +154,6 @@ const Navbar = ({ picturePath }) => {
                         alignItems="center"
                         gap="3rem"
                     >
-                        <Avatar
-                            alt="Remy Sharp"
-                            sx={{ fontSize: "22px", bgcolor: dark }}
-
-                        >
-                            {nickName.slice(0, 1).toUpperCase()}
-                        </Avatar>
-
                         <IconButton
                             onClick={() => dispatch(setMode())}
                             sx={{ fontSize: "25px" }}

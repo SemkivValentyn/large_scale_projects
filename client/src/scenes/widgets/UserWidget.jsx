@@ -11,6 +11,7 @@ import WidgetWrapper from "componets/WidgetWrapper";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import UserImage from "componets/UserImage";
 
 
 
@@ -60,14 +61,17 @@ const UserWidget = ({ userId, picturePath }) => {
                 onClick={() => navigate(`/profile/${userId}`)}
             >
                 <FlexBetween gap="1rem">
-                    <Avatar
+                    {/* <Avatar
 
                         alt="Remy Sharp"
                         sx={{ fontSize: "22px", bgcolor: dark, width: "55px", height: "55px" }}
 
                     >
                         {nickname.slice(0, 1).toUpperCase()}
-                    </Avatar>
+                    </Avatar> */}
+
+                    <UserImage image={picturePath} />
+                    
                     <Box>
                         <Typography
                             variant="h4"
