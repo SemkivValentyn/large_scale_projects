@@ -9,7 +9,6 @@ import {
     FormControl,
     useTheme,
     useMediaQuery,
-    Avatar
 } from "@mui/material";
 import {
     Search,
@@ -59,7 +58,7 @@ const Navbar = ({ picturePath }) => {
                         },
                     }}
                 >
-                    Sociopedia
+                    Metas
                 </Typography>
                 {isNonMobileScreens && (
                     <FlexBetween
@@ -113,7 +112,7 @@ const Navbar = ({ picturePath }) => {
                             <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
                         </Select>
                     </FormControl>
-
+                    {/* Add Avatar */}
                 </FlexBetween>
             ) : (
                 <IconButton
