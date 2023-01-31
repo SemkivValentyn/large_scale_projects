@@ -58,7 +58,7 @@ const Navbar = ({ picturePath }) => {
                         },
                     }}
                 >
-                    Metas
+                    SociPedia
                 </Typography>
                 {isNonMobileScreens && (
                     <FlexBetween

@@ -17,7 +17,51 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     const primaryLight = palette.primary.light;
     const primaryDark = palette.primary.dark;
     const main = palette.neutral.main;
+    const medium = palette.neutral.medium;
 
+    const isFriend = friends.find((friend) => friend._id === friendId);
+
+    const patchFriend = async () => {
+        const response = await fetch(
+            `http://localhost:3001/users/${_id}/${friendId}`,
+            {
+                method: "PATCH",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+        const data = await response.json();
+        dispatch(setFriends({ friends: data }));
+    }
+    return (
+        <FlexBetween>
+            <FlexBetween gap="1rem">
+                <UserImage image={userPicturePath} size="55px" />
+                <Box
+                    onClick={() => {
+                        navigate(`/profile/${friendId}`);
+                        navigate(0);
+                    }}
+                >
+                    <Typography
+                        color={main}
+                        variant="h5"
+                        fontWeight="500"
+                        sx={{
+                            "&:hover": {
+                                color: palette.primary.light,
+                                cursor: "pointer"
+                            }
+                        }}
+                    >
+                        {name}
+                    </Typography>
+                </Box>
+            </FlexBetween>
+        </FlexBetween>
+    )
 }
 
 export default Friend; 
